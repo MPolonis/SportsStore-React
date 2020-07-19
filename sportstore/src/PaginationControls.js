@@ -30,7 +30,8 @@ export class PaginationControls extends Component {
                 </div>
                 <div className="form-inline justify-content-center">
                     <select className="form-control" onChange={this.handlePageSizeChange} value={this.props.pageSize || this.pageSizes[0]} >
-                        
+                        {this.pageSizes.map(s => 
+                            <option value={s} key={s}>{s} na stronie</option>)}
                     </select>
                     <select className="form-control" onChange={this.handleSortPropertyChange} value={this.props.sortKey || this.sortKeys[0]}>
                         {this.sortKeys.map(k => 
